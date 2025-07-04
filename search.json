@@ -4,13 +4,20 @@
     "href": "index.html",
     "title": "high-temperature",
     "section": "",
-    "text": "using cached file: C:/Users/Audit/AppData/Local/R/cache/R/rnoaa/noaa_ghcnd/USW00024233.dly\n\n\ndate created (size, mb): 2025-07-04 06:21:20.873066 (8.11)\n\n\nfile min/max dates: 1948-01-01 / 2025-07-31"
+    "text": "using cached file: C:/Users/Audit/AppData/Local/R/cache/R/rnoaa/noaa_ghcnd/USW00024233.dly\n\n\ndate created (size, mb): 2025-07-04 06:21:20.873066 (8.11)\n\n\nfile min/max dates: 1948-01-01 / 2025-07-31\nThe image is a scatter plot titled “Daily maximum temperatures in Seattle, 1979–2021”, depicting over four decades of climate data. Here’s an eloquent and insightful description of the visualization:"
+  },
+  {
+    "objectID": "index.html#description-of-the-image",
+    "href": "index.html#description-of-the-image",
+    "title": "high-temperature",
+    "section": "Description of the Image",
+    "text": "Description of the Image\nThis scatter plot illustrates the daily maximum temperatures in Seattle across the years 1979 to 2021. The x-axis represents the day of the year (1 through 365), and the y-axis denotes the maximum daily temperature in degrees Fahrenheit, ranging approximately from 20°F to 120°F.\nEach small gray dot corresponds to a single day’s maximum recorded temperature across this 43-year span, forming a seasonal arc that reflects Seattle’s annual temperature cycle:\nLower temperatures dominate the winter months (beginning and end of the year).\nHigher temperatures cluster in the mid-year, peaking in summer (June to August).\nAt the center-top of the plot, three large red dots stand out significantly above the rest of the distribution. These represent the exceptionally hot temperatures recorded over a three-day period, annotated with the bold red label “Last 3 days.”\nThe visual starkly emphasizes the extreme heat anomaly, as those red points sit well above the typical range for that time of year — a powerful visual cue highlighting how rare and unprecedented these temperatures were compared to historical records."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "This file shows historical temerature mape in Seattle from 1979-2021. The data, image and description is prepared with AI."
   }
 ]
