@@ -1,0 +1,63 @@
+---
+title: "high-temperature"
+author: Naveed Ahmad
+execute: 
+  echo: false
+---
+
+
+```{r}
+#| message: false
+#| warning: false
+library(rnoaa)
+library(tidyverse)
+library(lubridate)
+
+```
+
+```{r}
+# Pull daily data for Seattle station
+x <- meteo_pull_monitors(
+  monitors = "USW00024233",
+  var = "TMAX",
+  date_min = "1979-01-01",
+  date_max = "2021-12-31"
+)
+x
+```
+
+```{r}
+cl_x <- x %>%
+  mutate(
+    date = as.Date(date),
+    year = year(date),
+    doy = yday(date),  # Day of year (1 to 365)
+    tmax_c = tmax / 10,
+    tmax_f = tmax_c * 9/5 + 32
+  ) %>%
+  filter(!is.na(tmax_f))
+cl_x
+
+```
+
+```{r}
+ggplot(cl_x, aes(x = doy, y = tmax_f)) +
+  geom_point(alpha = 0.15, color = "gray40", size = 0.7) +
+  geom_point(
+    data = cl_x %>%
+      filter(date >= as.Date("2021-06-26") & date <= as.Date("2021-06-28")),
+    aes(x = doy, y = tmax_f),
+    color = "red", size = 3
+  ) +
+  annotate("text", x = 180, y = 105, label = "Last 3 days", color = "red", fontface = "bold") +
+  labs(
+    title = "Daily maximum temperatures in Seattle, 1979–2021",
+    subtitle = "120 deg. Fahrenheit",
+    x = NULL, y = NULL
+  ) +
+  theme_minimal(base_size = 14)
+
+```
+
+
+
